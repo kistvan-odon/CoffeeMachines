@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/istvankis/.m2/repository/net/thucydides/thucydides-junit/0.9.104/thucydides-junit-0.9.104.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="net.thucydides"/>
+			<attribute name="maven.artifactId" value="thucydides-junit"/>
+			<attribute name="maven.version" value="0.9.104"/>
+			<attribute name="maven.scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/istvankis/.m2/repository/net/thucydides/thucydides-core/0.9.104/thucydides-core-0.9.104.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="net.thucydides"/>
+			<attribute name="maven.artifactId" value="thucydides-core"/>
+			<attribute name="maven.version" value="0.9.104"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/istvankis/.m2/repository/org/seleniumhq/selenium/selenium-api/2.25.0/selenium-api-2.25.0.jar" sourcepath="C:/Users/istvankis/.m2/repository/org/seleniumhq/selenium/selenium-api/2.25.0/selenium-api-2.25.0-sources.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
+			<attribute name="maven.artifactId" value="selenium-api"/>
+			<attribute name="maven.version" value="2.25.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/istvankis/.m2/repository/org/seleniumhq/selenium/selenium-support/2.25.0/selenium-support-2.25.0.jar" sourcepath="C:/Users/istvankis/.m2/repository/org/seleniumhq/selenium/selenium-support/2.25.0/selenium-support-2.25.0-sources.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
+			<attribute name="maven.artifactId" value="selenium-support"/>
+			<attribute name="maven.version" value="2.25.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="/facebookproj"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/classes" path="target/generated-sources/localizer">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
