@@ -31,6 +31,6 @@ public class BuyNewMachineTest {
 	
 	@Test
 	public void buyNewMachine(){
-		machinesStepGroups.addMachineToCart(Constants.AUTOMATE_NOI, "Necta Kiko");
+		machinesStepGroups.addMachineToCart(Constants.AUTOMATE_NOI, "Bianchi Iris");
 	}
 }

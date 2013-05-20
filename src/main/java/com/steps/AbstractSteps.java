@@ -20,7 +20,6 @@ public class AbstractSteps extends ScenarioSteps{
 
 	@Step
 	public void navigateToURL(String pageURL){
-		getDriver().manage().window().maximize();
 		getDriver().get(pageURL);
 	}
 	
