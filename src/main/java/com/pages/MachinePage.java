@@ -11,12 +11,12 @@ public class MachinePage extends AbstractPage{
 	}
 
 	@FindBy(css = "span.decalat > a")
-	private WebElement buyButton;
+	private WebElement addToCartButton;
 	
 	/**
-	 * Clicks on the "Buy" button
+	 * Clicks on the "Add To Cart" button
 	 */
-	public void clickOnBuyButton(){
-		buyButton.click();
+	public void clickOnAddToCartButton(){
+		addToCartButton.click();
 	}
 }

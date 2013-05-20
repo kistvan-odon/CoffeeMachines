@@ -5,8 +5,9 @@ import net.thucydides.core.annotations.StepGroup;
 public class MachinesStepGroups extends AbstractStepGroups{
 
 	@StepGroup
-	public void selectMachine(String machineCategory, String machineName){
+	public void addMachineToCart(String machineCategory, String machineName){
 		menuSteps.selectMenuEntry(machineCategory);
 		machinesSteps.selectDesiredMachine(machineName);
+		machineSteps.clickOnAddToCartButton();
 	}
 }

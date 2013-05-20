@@ -1,6 +1,7 @@
 package com.stepgroups;
 
 import com.steps.AbstractSteps;
+import com.steps.MachineSteps;
 import com.steps.MenuSteps;
 import com.steps.MachinesSteps;
 
@@ -16,4 +17,7 @@ public class AbstractStepGroups {
 	
 	@Steps
 	public MachinesSteps machinesSteps;
+	
+	@Steps
+	public MachineSteps machineSteps;
 }

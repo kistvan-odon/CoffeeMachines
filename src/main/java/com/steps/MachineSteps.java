@@ -12,7 +12,7 @@ public class MachineSteps extends AbstractSteps{
 	private static final long serialVersionUID = 1L;
 
 	@Step
-	public void clickOnBuyButton(){
-		machinePage().clickOnBuyButton();
+	public void clickOnAddToCartButton(){
+		machinePage().clickOnAddToCartButton();
 	}
 }

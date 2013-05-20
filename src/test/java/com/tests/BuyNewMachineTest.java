@@ -30,7 +30,7 @@ public class BuyNewMachineTest {
 	private MachinesStepGroups machinesStepGroups;
 	
 	@Test
-	public void selectNewMachine(){
-		machinesStepGroups.selectMachine(Constants.AUTOMATE_NOI, "Necta Kiko");
+	public void buyNewMachine(){
+		machinesStepGroups.addMachineToCart(Constants.AUTOMATE_NOI, "Necta Kiko");
 	}
 }
