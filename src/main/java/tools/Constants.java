@@ -3,7 +3,7 @@ package tools;
 
 public class Constants {
 
-	public static final String BASE_URL = "http://localhost:8089/coffeemachines/";
+	public static final String BASE_URL = "http://localhost/coffeemachines/";
 	public static final String ADMIN_USER = "Kis";
 	
 	// Menu entries
