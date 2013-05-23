@@ -14,7 +14,8 @@ import org.openqa.selenium.WebDriver;
 import tools.Application;
 import tools.Constants;
 
-import com.stepgroups.MachinesStepGroups;
+import com.stepgroups.BuyProductStepGroups;
+import com.steps.CartSteps;
 
 @Story(Application.Machines.NewMachine.class)
 @RunWith(ThucydidesRunner.class)
@@ -27,10 +28,15 @@ public class BuyNewMachineTest {
 	public Pages pages;
 	
 	@Steps
-	private MachinesStepGroups machinesStepGroups;
+	private BuyProductStepGroups buyMachinesStepGroups;
+
+	@Steps
+	public CartSteps cartSteps;
 	
 	@Test
 	public void buyNewMachine(){
-		machinesStepGroups.addMachineToCart(Constants.AUTOMATE_NOI, "Bianchi Iris");
+		buyMachinesStepGroups.addProductToCart(Constants.AUTOMATE_NOI, "Bianchi Iris");
+		cartSteps.verifyNumberOfProducts(1);
+		cartSteps.verifyProductPrice("", 124.5);
 	}
 }

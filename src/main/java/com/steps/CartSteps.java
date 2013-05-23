@@ -12,7 +12,12 @@ public class CartSteps extends AbstractSteps {
 	private static final long serialVersionUID = 1L;
 
 	@Step
-	public void verifyProductPrice(String productName, String productPrice) {
+	public void verifyNumberOfProducts(int noOfProducts) {
+		cartPage().verifyNumberOfProducts(noOfProducts);
+	}
+
+	@Step
+	public void verifyProductPrice(String productName, Double productPrice) {
 		cartPage().verifyProductPrice(productName, productPrice);
 	}
 }

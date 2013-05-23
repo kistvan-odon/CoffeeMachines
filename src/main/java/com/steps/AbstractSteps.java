@@ -1,10 +1,11 @@
 package com.steps;
 
 import com.pages.AbstractPage;
+import com.pages.AddProductPage;
 import com.pages.CartPage;
-import com.pages.MachinePage;
+import com.pages.ProductPage;
 import com.pages.MenuPage;
-import com.pages.MachinesPage;
+import com.pages.ProductsPage;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
@@ -32,15 +33,19 @@ public class AbstractSteps extends ScenarioSteps {
 		return getPages().currentPageAt(MenuPage.class);
 	}
 
-	public MachinesPage machinesPage() {
-		return getPages().currentPageAt(MachinesPage.class);
+	public ProductsPage productsPage() {
+		return getPages().currentPageAt(ProductsPage.class);
 	}
 
-	public MachinePage machinePage() {
-		return getPages().currentPageAt(MachinePage.class);
+	public ProductPage productPage() {
+		return getPages().currentPageAt(ProductPage.class);
 	}
 
 	public CartPage cartPage() {
 		return getPages().currentPageAt(CartPage.class);
+	}
+	
+	public AddProductPage addProductPage() {
+		return getPages().currentPageAt(AddProductPage.class);
 	}
 }

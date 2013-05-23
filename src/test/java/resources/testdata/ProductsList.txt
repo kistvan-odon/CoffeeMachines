@@ -1,0 +1,2 @@
+category,smallImage,bigImage,brand,model,characteristics,price
+Automate noi,imagine17.jpg,imagine17M.jpg,Bianchi,Iris,super,2000.00,
