@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 import tools.Application;
 import tools.Client;
 import tools.Constants;
+import tools.FileUtils;
 import tools.Product;
 
 import com.stepgroups.RegisterProductStepGroups;
@@ -37,6 +38,8 @@ public class RegisterProductTest {
 		registerProductStepGroups.registerProduct(product.category,
 				product.smallImage, product.bigImage, product.brand,
 				product.model, product.characteristics, product.price);
+		FileUtils.deleteFileOrDirectory(product.smallImage);
+		FileUtils.deleteFileOrDirectory(product.bigImage);
 		Client client = Client.generateNewClient();
 	}
 }
