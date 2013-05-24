@@ -33,8 +33,8 @@ public final class RandomGenerators {
 		return getRandomString().substring(0, length);
 	}
 
-	public static void createRandomImage(String fileName, String fileExtension,
-			int width, int height, int pixelSize) {
+	public static void createRandomImage(String fileName, int width,
+			int height, int pixelSize) {
 		BufferedImage bi = new BufferedImage(width, height,
 				BufferedImage.TYPE_3BYTE_BGR);
 		Graphics2D g = (Graphics2D) bi.getGraphics();
@@ -46,22 +46,20 @@ public final class RandomGenerators {
 			}
 		}
 		g.dispose();
-		saveImageToFile(bi, fileName, fileExtension);
+		saveImageToFile(bi, fileName);
 	}
 
-	public static void saveImageToFile(BufferedImage img, String fileName,
-			String fileExtension) {
+	public static void saveImageToFile(BufferedImage img, String fileName) {
 		System.out.println("fileName " + fileName);
 		ImageWriter writer = null;
 		Iterator<ImageWriter> iterator = ImageIO
-				.getImageWritersByFormatName(fileExtension);
+				.getImageWritersByFormatName(Constants.PRODUCT_IMAGE_TYPE);
 		if (iterator.hasNext()) {
 			writer = iterator.next();
 		}
 		ImageOutputStream ios = null;
 		try {
-			ios = ImageIO.createImageOutputStream(new File(fileName + '.'
-					+ fileExtension));
+			ios = ImageIO.createImageOutputStream(new File(fileName));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

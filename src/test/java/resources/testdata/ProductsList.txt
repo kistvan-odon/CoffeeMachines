@@ -1,2 +1,3 @@
 category,smallImage,bigImage,brand,model,characteristics,price
-Automate noi,imagine17.jpg,imagine17M.jpg,Bianchi,Iris,super,2000.00,
+Cafea,D:\Repository\CoffeeMachines\src\test\java\resources\testdata\productimages\smallImage1vtpumae16o3q0qgfl0c.jpg,D:\Repository\CoffeeMachines\src\test\java\resources\testdata\productimages\bigImage3f5mbesobd92upg89r9t.jpg,brandtf5rcohdkgmbg60cc44j,modelnb5nhl06r4tbndnk1079,characteristics8t9g3tf07gt9p3ihqn5l,4996.28,
+Automate s-h,D:\Repository\CoffeeMachines\src\test\java\resources\testdata\productimages\smallImage1bmt2qrunvj2ij46vd54.jpg,D:\Repository\CoffeeMachines\src\test\java\resources\testdata\productimages\bigImageulrhtt83n09n91rd3fhc.jpg,brandanlcnsh289eob7scl90j,model71j33p7nce7i8afb8nj4,characteristics6e7khs4qus305kj3ojm,7939.78,

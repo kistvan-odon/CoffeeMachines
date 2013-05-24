@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AddProductPage extends AbstractPage{
+public class RegisterProductPage extends AbstractPage{
 
-	public AddProductPage(WebDriver driver) {
+	public RegisterProductPage(WebDriver driver) {
 		super(driver);
 	}
 
@@ -89,8 +89,8 @@ public class AddProductPage extends AbstractPage{
 	 * Inserts the price of the product
 	 * @param productPrice
 	 */
-	public void insertProductPrice(String productPrice){
-		productPriceInput.sendKeys(productPrice);
+	public void insertProductPrice(Double productPrice){
+		productPriceInput.sendKeys(productPrice.toString());
 	}
 	
 	/**

@@ -20,6 +20,11 @@ public class ProductSteps extends AbstractSteps{
 	public void verifyProductCharacteristics(String productCharacteristics) {
 		productPage().verifyProductCharacteristics(productCharacteristics);
 	}
+	
+	@Step
+	public void verifyProductPrice(Double productPrice) {
+		productPage().verifyProductPrice(productPrice);
+	}
 
 	@Step
 	public void clickOnAddToCartButton(){

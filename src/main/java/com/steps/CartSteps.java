@@ -20,4 +20,24 @@ public class CartSteps extends AbstractSteps {
 	public void verifyProductPrice(String productName, Double productPrice) {
 		cartPage().verifyProductPrice(productName, productPrice);
 	}
+	
+	@Step
+	public void verifyCartTotal(Double totalPrice) {
+		cartPage().verifyCartTotal(totalPrice);
+	}
+	
+	@Step
+	public void clickOnBuyProductsButton() {
+		cartPage().clickOnBuyProductsButton();
+	}
+	
+	@Step
+	public void selectClientType(boolean newClient) {
+		cartPage().selectClientType(newClient);
+	}
+	
+	@Step
+	public void clickOnGoToCheckoutButton() {
+		cartPage().clickOnGoToCheckoutButton();
+	}
 }

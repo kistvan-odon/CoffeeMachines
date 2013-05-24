@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Constants {
 
-	public static final String BASE_URL = "http://localhost/coffeemachines/";
+	public static final String BASE_URL = "http://localhost:8089/coffeemachines/";
+	public static final String REGISTER_PRODUCT_URL = BASE_URL + "adaugautomate.php";
 	public static final String ADMIN_USER = "Kis";
 
 	// Menu entries
@@ -25,6 +26,9 @@ public class Constants {
 	public static final String EXISTING_PRODUCTS_FILE_PATH = FileUtils
 			.getProjectPath()
 			+ "\\src\\test\\java\\resources\\testdata\\ProductsList.txt";
+	public static final String EXISTING_CLIENTS_FILE_PATH = FileUtils
+			.getProjectPath()
+			+ "\\src\\test\\java\\resources\\testdata\\ClientsList.txt";
 	public static final String PRODUCT_IMAGES_FOLDER = FileUtils
 			.getProjectPath()
 			+ "\\src\\test\\java\\resources\\testdata\\productimages\\";

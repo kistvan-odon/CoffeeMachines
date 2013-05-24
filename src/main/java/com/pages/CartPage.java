@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import tools.MathUtils;
 import tools.StringUtils;
 
 public class CartPage extends AbstractPage {
@@ -19,6 +18,21 @@ public class CartPage extends AbstractPage {
 
 	@FindBy(css = "div.body-middle table tr")
 	private List<WebElement> productsList;
+
+	@FindBy(css = "div.body-middle > p")
+	private WebElement cartTotalContainer;
+
+	@FindBy(css = "div.body-middle > p.centrat > a")
+	private WebElement buyProductsButton;
+
+	@FindBy(css = "div.body-middle table tr input")
+	private WebElement newClientButton;
+
+	@FindBy(css = "div.body-middle table tr:nth-child(3) input")
+	private WebElement existingClientButton;
+	
+	@FindBy(css = "input[value='Cumpar']")
+	private WebElement goToCheckoutButton;
 
 	/**
 	 * Verifies that the no. of products in the cart is the expected one
@@ -44,7 +58,7 @@ public class CartPage extends AbstractPage {
 		for (WebElement currentProduct : productsList) {
 			String currentProductName = currentProduct.findElement(
 					By.cssSelector("td > h2")).getText();
-			if (currentProductName.contains(productPrice.toString())) {
+			if (currentProductName.contains(productName)) {
 				foundProduct = true;
 				String currentProductPriceContainer = currentProduct
 						.findElement(By.cssSelector("td:nth-child(2) > h2"))
@@ -53,11 +67,50 @@ public class CartPage extends AbstractPage {
 						.getFirstDoubleNumberFromString(currentProductPriceContainer);
 				Assert.assertTrue("Product price should be '" + productPrice
 						+ "' and it is '" + currentProductPrice + "'!",
-						currentProductPrice == productPrice);
+						currentProductPrice.equals(productPrice));
 				break;
 			}
 		}
 		Assert.assertTrue("Product named '" + productName
 				+ "' was not found in the cart!", foundProduct);
+	}
+
+	/**
+	 * Verifies the cart total price
+	 * 
+	 * @param totalPrice
+	 */
+	public void verifyCartTotal(Double totalPrice) {
+		String actualTotalPriceContainer = cartTotalContainer.getText();
+		Double actualCartTotal = StringUtils
+				.getFirstDoubleNumberFromString(actualTotalPriceContainer);
+		Assert.assertTrue("Cart total price should be '" + totalPrice
+				+ "' and it is '" + actualCartTotal + "'!",
+				actualCartTotal.equals(totalPrice));
+	}
+
+	/**
+	 * Clicks on the "Buy products"
+	 */
+	public void clickOnBuyProductsButton() {
+		buyProductsButton.click();
+	}
+
+	/**
+	 * Selects the client type
+	 * @param newClient
+	 */
+	public void selectClientType(boolean newClient) {
+		if (newClient)
+			newClientButton.click();
+		else
+			existingClientButton.click();
+	}
+	
+	/**
+	 * Clicks on the "Go To Checkout" button
+	 */
+	public void clickOnGoToCheckoutButton() {
+		goToCheckoutButton.click();
 	}
 }

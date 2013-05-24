@@ -14,19 +14,21 @@ public class Product {
 		product.category = Constants.PRODUCT_CATEGORIES
 				.get(RandomGenerators.random
 						.nextInt(Constants.PRODUCT_CATEGORIES.size()));
-		product.smallImage = RandomGenerators.getRandomString("smallImage");
-		RandomGenerators.createRandomImage(Constants.PRODUCT_IMAGES_FOLDER
-				+ product.smallImage, Constants.PRODUCT_IMAGE_TYPE, 175, 175,
-				10);
-		product.bigImage = RandomGenerators.getRandomString("bigImage");
-		RandomGenerators.createRandomImage(Constants.PRODUCT_IMAGES_FOLDER
-				+ product.bigImage, Constants.PRODUCT_IMAGE_TYPE, 450, 500, 10);
+		product.smallImage = Constants.PRODUCT_IMAGES_FOLDER
+				+ RandomGenerators.getRandomString("smallImage") + "."
+				+ Constants.PRODUCT_IMAGE_TYPE;
+		RandomGenerators.createRandomImage(product.smallImage, 175, 175, 10);
+		product.bigImage = Constants.PRODUCT_IMAGES_FOLDER
+				+ RandomGenerators.getRandomString("bigImage") + "."
+				+ Constants.PRODUCT_IMAGE_TYPE;
+		RandomGenerators.createRandomImage(product.bigImage, 450, 500, 10);
 		product.brand = RandomGenerators.getRandomString("brand");
 		product.model = RandomGenerators.getRandomString("model");
 		product.characteristics = RandomGenerators
 				.getRandomString("characteristics");
-		product.price = RandomGenerators.random.nextDouble()
-				* Constants.MAX_PRODUCT_PRICE;
+		product.price = MathUtils
+				.getDoubleWithTwoDigits(RandomGenerators.random.nextDouble()
+						* Constants.MAX_PRODUCT_PRICE);
 		Product.saveProductToFile(product);
 		return product;
 	}
@@ -66,19 +68,4 @@ public class Product {
 		FileUtils.writeToFile(Constants.EXISTING_PRODUCTS_FILE_PATH,
 				getProductDetailsForCSV(product), true);
 	}
-
-	// public Product() {
-	// }
-	//
-	// public Product(String productCategory, String productSmallImage,
-	// String productBigImage, String productBrand, String productModel,
-	// String productCharacteristics, Double productPrice) {
-	// category = productCategory;
-	// this.smallImage = productSmallImage;
-	// this.bigImage = productBigImage;
-	// this.brand = productBrand;
-	// this.model = productModel;
-	// this.characteristics = productCharacteristics;
-	// this.productPrice = productPrice;
-	// }
 }

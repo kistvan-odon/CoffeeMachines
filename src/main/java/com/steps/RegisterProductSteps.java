@@ -3,9 +3,9 @@ package com.steps;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 
-public class AddProductSteps extends AbstractSteps {
+public class RegisterProductSteps extends AbstractSteps {
 
-	public AddProductSteps(Pages pages) {
+	public RegisterProductSteps(Pages pages) {
 		super(pages);
 	}
 
@@ -13,46 +13,46 @@ public class AddProductSteps extends AbstractSteps {
 
 	@Step
 	public void selectProductCategory(String productCategory) {
-		addProductPage().selectProductCategory(productCategory);
+		registerProductPage().selectProductCategory(productCategory);
 	}
 
 	@Step
 	public void insertSmallProductImage(String smallProductImage) {
-		addProductPage().insertSmallProductImage(smallProductImage);
+		registerProductPage().insertSmallProductImage(smallProductImage);
 	}
 
 	@Step
 	public void insertBigProductImage(String bigProductImage) {
-		addProductPage().insertBigProductImage(bigProductImage);
+		registerProductPage().insertBigProductImage(bigProductImage);
 	}
 
 	@Step
 	public void insertProductBrand(String productBrand) {
-		addProductPage().insertProductBrand(productBrand);
+		registerProductPage().insertProductBrand(productBrand);
 	}
 
 	@Step
 	public void insertProductModel(String productModel) {
-		addProductPage().insertProductModel(productModel);
+		registerProductPage().insertProductModel(productModel);
 	}
 
 	@Step
 	public void insertProductCaracteristics(String productCharacteristics) {
-		addProductPage().insertProductCaracteristics(productCharacteristics);
+		registerProductPage().insertProductCaracteristics(productCharacteristics);
 	}
 
 	@Step
-	public void insertProductPrice(String productPrice) {
-		addProductPage().insertProductPrice(productPrice);
+	public void insertProductPrice(Double productPrice) {
+		registerProductPage().insertProductPrice(productPrice);
 	}
 
 	@Step
 	public void clickOnAddProductButton() {
-		addProductPage().clickOnAddProductButton();
+		registerProductPage().clickOnAddProductButton();
 	}
 
 	@Step
 	public void clickOnDeleteProductButton() {
-		addProductPage().clickOnDeleteProductButton();
+		registerProductPage().clickOnDeleteProductButton();
 	}
 }
