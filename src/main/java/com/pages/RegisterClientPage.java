@@ -92,13 +92,13 @@ public class RegisterClientPage extends AbstractPage {
 	 * Clicks on the "Submit" button for new client
 	 */
 	public void clickOnSubmitNewClientButton() {
-		submitNewClientButton.sendKeys();
+		submitNewClientButton.click();
 	}
 
 	/**
 	 * Clicks on the "Submit" button for existing client
 	 */
 	public void clickOnSubmitExistingClientButton() {
-		submitExistingClientButton.sendKeys();
+		submitExistingClientButton.click();
 	}
 }

@@ -21,7 +21,7 @@ import com.stepgroups.RegisterClientStepGroups;
 
 @Story(Application.Products.BuyProducts.class)
 @RunWith(ThucydidesRunner.class)
-public class BuyProductTest {
+public class BuyProductWithNewClientTest {
 
 	@Managed(uniqueSession = true)
 	public WebDriver webdriver;
@@ -35,14 +35,16 @@ public class BuyProductTest {
 	private RegisterClientStepGroups registerClientStepGroups;
 
 	@Test
-	public void buyProduct() {
+	public void buyProductWithNewClient() {
 		Product product = Product.getRandomExistingProduct();
 		buyMachinesStepGroups.addProductToCart(product.category, product.brand
 				+ " " + product.model, product.characteristics, product.price);
 		buyMachinesStepGroups.verifyProductInCart(1, product.brand + " "
 				+ product.model, product.price, product.price);
-		Client client = Client.getRandomExistingClient();
-		buyMachinesStepGroups.selectClientTypeAndGoToCheckout(false);
-		registerClientStepGroups.loginExistingClient(client.email, client.password);
+		buyMachinesStepGroups.selectClientTypeAndGoToCheckout(true);
+		Client client = Client.generateNewClient();
+		registerClientStepGroups.registerClient(client.lastName,
+				client.firstName, client.address, client.phone, client.email,
+				client.password);
 	}
 }

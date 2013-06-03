@@ -7,16 +7,17 @@ import net.thucydides.core.annotations.Story;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.junit.runners.ThucydidesRunner;
 
+import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
 import tools.Application;
-import tools.Client;
 import tools.Constants;
 import tools.FileUtils;
 import tools.Product;
 
+import com.stepgroups.RegisterClientStepGroups;
 import com.stepgroups.RegisterProductStepGroups;
 
 @Story(Application.Products.RegisterProducts.class)
@@ -31,15 +32,22 @@ public class RegisterProductTest {
 
 	@Steps
 	private RegisterProductStepGroups registerProductStepGroups;
+	@Steps
+	private RegisterClientStepGroups registerClientStepGroups;
 
+	private Product product;
+	
 	@Test
 	public void registerProduct() {
-		Product product = Product.generateNewProduct();
+		product = Product.generateNewProduct();
 		registerProductStepGroups.registerProduct(product.category,
 				product.smallImage, product.bigImage, product.brand,
 				product.model, product.characteristics, product.price);
+	}
+	
+	@After
+	public void tearDown(){
 		FileUtils.deleteFileOrDirectory(product.smallImage);
 		FileUtils.deleteFileOrDirectory(product.bigImage);
-		Client client = Client.generateNewClient();
 	}
 }

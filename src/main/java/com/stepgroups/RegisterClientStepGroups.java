@@ -22,4 +22,11 @@ public class RegisterClientStepGroups extends AbstractStepGroups {
 		registerClientSteps.insertClientPassword(password);
 		registerClientSteps.clickOnSubmitExistingClientButton();
 	}
+	
+	@StepGroup
+	public void loginExistingClient1(String lastName, String password) {
+		registerClientSteps.insertClientLastName(lastName);
+		registerClientSteps.insertClientPassword(password);
+		registerClientSteps.clickOnSubmitExistingClientButton();
+	}
 }

@@ -50,7 +50,6 @@ public final class RandomGenerators {
 	}
 
 	public static void saveImageToFile(BufferedImage img, String fileName) {
-		System.out.println("fileName " + fileName);
 		ImageWriter writer = null;
 		Iterator<ImageWriter> iterator = ImageIO
 				.getImageWritersByFormatName(Constants.PRODUCT_IMAGE_TYPE);
@@ -70,6 +69,11 @@ public final class RandomGenerators {
 		param.setCompressionQuality(0.98f);
 		try {
 			writer.write(null, new IIOImage(img, null, null), param);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			ios.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

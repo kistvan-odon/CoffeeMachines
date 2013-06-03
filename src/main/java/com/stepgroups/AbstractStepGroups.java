@@ -13,23 +13,23 @@ import net.thucydides.core.annotations.Steps;
 public class AbstractStepGroups {
 
 	@Steps
-	public AbstractSteps abstractSteps;
+	protected AbstractSteps abstractSteps;
 
 	@Steps
-	public MenuSteps menuSteps;
+	protected MenuSteps menuSteps;
 
 	@Steps
-	public ProductsSteps productsSteps;
+	protected ProductsSteps productsSteps;
 
 	@Steps
-	public ProductSteps productSteps;
+	protected ProductSteps productSteps;
 
 	@Steps
-	public CartSteps cartSteps;
+	protected CartSteps cartSteps;
 	
 	@Steps
-	public RegisterProductSteps registerProductSteps;
+	protected RegisterProductSteps registerProductSteps;
 	
 	@Steps
-	public RegisterClientSteps registerClientSteps;
+	protected RegisterClientSteps registerClientSteps;
 }

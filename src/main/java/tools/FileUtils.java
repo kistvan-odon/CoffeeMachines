@@ -82,22 +82,18 @@ public class FileUtils {
 	public static void deleteFileOrDirectory(File file) {
 		try {
 			if (file.exists())
-				FileDeleteStrategy.FORCE.delete(file);
+				file.delete();
+			FileDeleteStrategy.FORCE.delete(file);
 		} catch (Exception e) {
+			e.printStackTrace();
 			Assert.fail("The file named '" + file.getName()
 					+ "' was not deleted successfully!");
 		}
 	}
 
 	public static void deleteFileOrDirectory(String filePath) {
-		try {
-			File file = new File(filePath);
-			if (file.exists())
-				FileDeleteStrategy.FORCE.delete(file);
-		} catch (Exception e) {
-			Assert.fail("The file named '" + filePath
-					+ "' was not deleted successfully!");
-		}
+		File file = new File(filePath);
+		deleteFileOrDirectory(file);
 	}
 
 	public static void cleanDirectory(String directoryPath) {
@@ -106,6 +102,7 @@ public class FileUtils {
 			if (directory.exists())
 				org.apache.commons.io.FileUtils.cleanDirectory(directory);
 		} catch (Exception e) {
+			e.printStackTrace();
 			Assert.fail("The directory named '" + directoryPath
 					+ "' was not cleaned successfully!");
 		}
@@ -167,9 +164,11 @@ public class FileUtils {
 		return new File("").getAbsolutePath();
 	}
 
-	public static void writeToFile(String filePath, String fileContent, boolean append) {
+	public static void writeToFile(String filePath, String fileContent,
+			boolean append) {
 		try {
-			BufferedWriter out = new BufferedWriter(new FileWriter(filePath, append));
+			BufferedWriter out = new BufferedWriter(new FileWriter(filePath,
+					append));
 			out.write(fileContent);
 			out.close();
 		} catch (IOException e) {
@@ -259,6 +258,7 @@ public class FileUtils {
 
 	/**
 	 * Reads a file line by line and returns a list with the file lines
+	 * 
 	 * @param filePath
 	 * @return
 	 */

@@ -26,31 +26,31 @@ public class AbstractSteps extends ScenarioSteps {
 		getDriver().get(pageURL);
 	}
 
-	public AbstractPage abstractPage() {
+	protected AbstractPage abstractPage() {
 		return getPages().currentPageAt(AbstractPage.class);
 	}
 
-	public MenuPage menuPage() {
+	protected MenuPage menuPage() {
 		return getPages().currentPageAt(MenuPage.class);
 	}
 
-	public ProductsPage productsPage() {
+	protected ProductsPage productsPage() {
 		return getPages().currentPageAt(ProductsPage.class);
 	}
 
-	public ProductPage productPage() {
+	protected ProductPage productPage() {
 		return getPages().currentPageAt(ProductPage.class);
 	}
 
-	public CartPage cartPage() {
+	protected CartPage cartPage() {
 		return getPages().currentPageAt(CartPage.class);
 	}
 	
-	public RegisterProductPage registerProductPage() {
+	protected RegisterProductPage registerProductPage() {
 		return getPages().currentPageAt(RegisterProductPage.class);
 	}
 	
-	public RegisterClientPage registerClientPage() {
+	protected RegisterClientPage registerClientPage() {
 		return getPages().currentPageAt(RegisterClientPage.class);
 	}
 }

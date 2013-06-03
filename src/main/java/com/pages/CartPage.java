@@ -25,10 +25,10 @@ public class CartPage extends AbstractPage {
 	@FindBy(css = "div.body-middle > p.centrat > a")
 	private WebElement buyProductsButton;
 
-	@FindBy(css = "div.body-middle table tr input")
+	@FindBy(css = "div.body-middle table tr td input")
 	private WebElement newClientButton;
 
-	@FindBy(css = "div.body-middle table tr:nth-child(3) input")
+	@FindBy(css = "div.body-middle table tr td:nth-child(3) input")
 	private WebElement existingClientButton;
 	
 	@FindBy(css = "input[value='Cumpar']")

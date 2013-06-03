@@ -1,6 +1,7 @@
 package com.stepgroups;
 
 import tools.Constants;
+import tools.FileUtils;
 import net.thucydides.core.annotations.StepGroup;
 
 public class RegisterProductStepGroups extends AbstractStepGroups {
