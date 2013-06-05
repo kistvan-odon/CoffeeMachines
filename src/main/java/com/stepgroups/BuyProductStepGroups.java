@@ -9,7 +9,7 @@ public class BuyProductStepGroups extends AbstractStepGroups {
 	public void addProductToCart(String productCategory, String productName,
 			String productCharacteristics, Double productPrice) {
 		abstractSteps.navigateToURL(Constants.BASE_URL);
-		menuSteps.selectMenuEntry(productCategory);
+		menuSteps.openMenuEntry(productCategory);
 		productsSteps.selectDesiredProduct(productName);
 		productSteps.verifyProductName(productName);
 		productSteps.verifyProductCharacteristics(productCharacteristics);

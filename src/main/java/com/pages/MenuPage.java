@@ -21,7 +21,7 @@ public class MenuPage extends AbstractPage {
 	 * Clicks on the desired menu entry
 	 * @param menuEntry
 	 */
-	public void selectMenuEntry(String menuEntry) {
+	public void openMenuEntry(String menuEntry) {
 		boolean foundMenuEntry = false;
 		for (WebElement currentMenuEntry : menuEntries) {
 			String menuEntryText = currentMenuEntry.getText();

@@ -12,8 +12,8 @@ public class MenuSteps extends AbstractSteps{
 	private static final long serialVersionUID = 1L;
 
 	@Step
-	public void selectMenuEntry(String menuEntry) {
-		menuPage().selectMenuEntry(menuEntry);
+	public void openMenuEntry(String menuEntry) {
+		menuPage().openMenuEntry(menuEntry);
 	}
 	
 }

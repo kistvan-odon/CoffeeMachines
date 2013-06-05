@@ -1,7 +1,5 @@
 package com.stepgroups;
 
-import tools.Constants;
-import tools.FileUtils;
 import net.thucydides.core.annotations.StepGroup;
 
 public class RegisterProductStepGroups extends AbstractStepGroups {
@@ -11,7 +9,7 @@ public class RegisterProductStepGroups extends AbstractStepGroups {
 			String smallProductImage, String bigProductImage,
 			String productBrand, String productModel,
 			String productCharacteristics, Double productPrice) {
-		abstractSteps.navigateToURL(Constants.REGISTER_PRODUCT_URL);
+		adminSteps.clickOnAddProductButton();
 		registerProductSteps.selectProductCategory(productCategory);
 		registerProductSteps.insertSmallProductImage(smallProductImage);
 		registerProductSteps.insertBigProductImage(bigProductImage);

@@ -17,6 +17,7 @@ import tools.Constants;
 import tools.FileUtils;
 import tools.Product;
 
+import com.stepgroups.AdminStepGroups;
 import com.stepgroups.RegisterClientStepGroups;
 import com.stepgroups.RegisterProductStepGroups;
 
@@ -27,26 +28,30 @@ public class RegisterProductTest {
 	@Managed(uniqueSession = true)
 	public WebDriver webdriver;
 
-	@ManagedPages(defaultUrl = Constants.REGISTER_PRODUCT_URL)
+	@ManagedPages(defaultUrl = Constants.BASE_URL)
 	public Pages pages;
 
 	@Steps
 	private RegisterProductStepGroups registerProductStepGroups;
 	@Steps
 	private RegisterClientStepGroups registerClientStepGroups;
+	@Steps
+	private AdminStepGroups adminStepGroups;
 
 	private Product product;
-	
+
 	@Test
 	public void registerProduct() {
+		adminStepGroups.loginAdminUser(Constants.ADMIN_USER,
+				Constants.ADMIN_PASS);
 		product = Product.generateNewProduct();
 		registerProductStepGroups.registerProduct(product.category,
 				product.smallImage, product.bigImage, product.brand,
 				product.model, product.characteristics, product.price);
 	}
-	
+
 	@After
-	public void tearDown(){
+	public void tearDown() {
 		FileUtils.deleteFileOrDirectory(product.smallImage);
 		FileUtils.deleteFileOrDirectory(product.bigImage);
 	}

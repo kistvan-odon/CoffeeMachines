@@ -1,6 +1,7 @@
 package com.steps;
 
 import com.pages.AbstractPage;
+import com.pages.AdminPage;
 import com.pages.RegisterClientPage;
 import com.pages.RegisterProductPage;
 import com.pages.CartPage;
@@ -52,5 +53,9 @@ public class AbstractSteps extends ScenarioSteps {
 	
 	protected RegisterClientPage registerClientPage() {
 		return getPages().currentPageAt(RegisterClientPage.class);
+	}
+	
+	protected AdminPage adminPage() {
+		return getPages().currentPageAt(AdminPage.class);
 	}
 }

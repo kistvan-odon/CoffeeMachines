@@ -6,8 +6,8 @@ import java.util.List;
 public class Constants {
 
 	public static final String BASE_URL = "http://localhost:8089/coffeemachines/";
-	public static final String REGISTER_PRODUCT_URL = BASE_URL + "adaugautomate.php";
-	public static final String ADMIN_USER = "Kis";
+	public static final String ADMIN_USER = "kis";
+	public static final String ADMIN_PASS = "kis";
 
 	// Menu entries
 	public static final String AUTOMATE_NOI = "Automate noi";
@@ -16,6 +16,7 @@ public class Constants {
 	public static final String INSTANT = "Instant";
 	public static final String SERVICII = "Servicii";
 	public static final String SISTEME_DE_PLATA = "Sisteme de plata";
+	public static final String ADMIN = "ADMIN";
 
 	public static final List<String> PRODUCT_CATEGORIES = Arrays.asList(
 			AUTOMATE_NOI, AUTOMATE_SECOND_HAND, CAFEA, INSTANT, SERVICII,
@@ -33,4 +34,7 @@ public class Constants {
 			.getProjectPath()
 			+ "\\src\\test\\java\\resources\\testdata\\productimages\\";
 	public static final String PRODUCT_IMAGE_TYPE = "jpg";
+	
+	// Messages constants
+	public static final String SITE_LOGIN_WELCOME_MESSAGE = ",you are logged in";
 }

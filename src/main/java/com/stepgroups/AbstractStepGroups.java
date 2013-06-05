@@ -1,6 +1,7 @@
 package com.stepgroups;
 
 import com.steps.AbstractSteps;
+import com.steps.AdminSteps;
 import com.steps.RegisterClientSteps;
 import com.steps.RegisterProductSteps;
 import com.steps.CartSteps;
@@ -32,4 +33,7 @@ public class AbstractStepGroups {
 	
 	@Steps
 	protected RegisterClientSteps registerClientSteps;
+	
+	@Steps
+	protected AdminSteps adminSteps;
 }
